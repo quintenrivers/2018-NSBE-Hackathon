@@ -6,3 +6,7 @@
 .page{
     margin-bottom: 5em;
 }
+
+.bg-dark {
+    background-color: #0062cc!important;
+}

@@ -8,7 +8,6 @@ verifyUser("carol23");
 authenticateUser("carol23", "122");
 //adds a business to the database
 function addBusiness(business, category, description, phone, website, lat, long,addr)
-
 {
 
 

@@ -6,14 +6,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="styles.css">
+    
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    
+        
+        <link rel="stylesheet" href="styles.css">
     <title>NSBE Hackathon!</title>
 </head>
 
 <body>
+        <header>
+				<!-- <div class=" cus-fixed-top"> -->
+				<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="position: relative !important;">
+				  <a class="navbar-brand" href="../TitlePage/index.html"><span class="glyphicons glyphicons-group"></span>My Black Pages</a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+					  <!-- <li class="nav-item active">
+						<a class="nav-link" href="#">My Black Pages <span class="sr-only">(current)</span></a>
+					  </li> -->
+					  <li class="nav-item">
+						<a class="nav-link" href="../MainPage/index.html">Find Business</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link active" href="../Registration/registration.html" >Register</a>
+					  </li>
+					</ul>
+				  </div>
+				</nav>
+			<!-- </div> -->
+			  </header>
     <div class="page">
         <div class="container">
             <div class="col-md-8 order-md-1 offset-md-2">
@@ -76,13 +103,13 @@
                         <textarea type="text" class="form-control" id="description" placeholder="Enter a brief description of your business"  ></textarea>
                         
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="address">Address</label>
                         <input id="adressTextField" type="text" class="form-control" id="address" placeholder="street"  >
                         <div class="invalid-feedback">
                             Please enter your address.
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="mb-3">
                         <label for="address2">Address 2
@@ -91,9 +118,7 @@
                         <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
                     </div> -->
 
-
                     <!-- <div class="row">
->>>>>>> 35277e67dd1dbb0c545d3993be9c0fbd7c6ea1de
                         <div class="col-md-6 mb-3">
                             <label for="Address2">Address 2</label>
                             <input type="text" class="form-control" id="address2" placeholder="Apartment or suite"  >
