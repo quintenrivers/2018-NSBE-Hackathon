@@ -1,4 +1,21 @@
 #map {
-        height: 300px;
-        width: 300px;
+        height: 87%;
+        width: 100%;
       }
+
+.hover-button {
+    opacity: 0.5;
+    background-color: #ffffff;
+    
+}
+
+.hover-button:hover {
+    opacity: 1;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+

@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="Password">Password</label>
-                            <input type="password" class="form-control" id="Password" placeholder="Password"  >
+                            <input type="password" class="form-control" id="password" placeholder="Password"  >
                         </div>
                     </div>
                     <div class="mb-3">
@@ -62,6 +62,11 @@
                         </div>
                     </div>
                     <div class="mb-3">
+                        <label for="description">Description</label>
+                        <textarea type="text" class="form-control" id="description" placeholder="Enter a brief description of your business"  ></textarea>
+                        
+                    </div>
+                    <div class="mb-3">
                         <label for="address">Address</label>
                         <input type="text" class="form-control" id="address" placeholder="street"  >
                         <div class="invalid-feedback">
@@ -69,12 +74,24 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="address2">Address 2
                             <span class="text-muted">(Optional)</span>
                         </label>
                         <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    </div> -->
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="Address2">Address 2</label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite"  >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="City"  >
+                        </div>
                     </div>
+
 
                     <div class="row">
                         <div class="col-md-5 mb-3">
@@ -127,6 +144,19 @@
     </div>
 
     <script src="./script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCy59U9y-_IWeOVpfEl7Nk4BfHl_mugVTg",
+        authDomain: "hackathon-a0972.firebaseapp.com",
+        databaseURL: "https://hackathon-a0972.firebaseio.com",
+        projectId: "hackathon-a0972",
+        storageBucket: "hackathon-a0972.appspot.com",
+        messagingSenderId: "838095309714"
+        };
+        firebase.initializeApp(config);
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -136,6 +166,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
         
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
