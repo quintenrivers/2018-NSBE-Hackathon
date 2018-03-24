@@ -32,6 +32,39 @@ function addUser(userID, business, first_name, last_name, password)
 
 }
 
+function register() {
+	var fname = document.getElementById('fname').value;
+	var lname = document.getElementById('lname').value;
+	var userID = document.getElementById('userID').value;
+	var password = document.getElementById('password').value;
+	var bName = document.getElementById('bName').value;
+	var category = document.getElementById('category').value;
+	var address = document.getElementById('address').value;
+	var address2 = document.getElementById('address2').value;
+	var country = document.getElementById('country').value;
+	var state = document.getElementById('state').value;
+	var zip = document.getElementById('zip').value;
+	var website = document.getElementById('website').value;
+	var phone = document.getElementById('phone').value;
+	var city = document.getElementById('city').value;
+	var description = document.getElementById('description').value;
+	// alert( lname)
+	// alert(userID)
+	// alert( Password)
+	// alert( bName)
+	// alert( category)
+	// alert( address)
+	// alert(address2)
+	// alert( country)
+	// alert( state)
+	// alert( zip)
+	// alert( website)
+	// alert(phone);
+
+
+	addBusiness(bName, category, city, description, phone, address+' '+ address2, website, zip);
+	addUser(userID, bName, fname, lname, password)
+}
 //Function verfies if usernmae is taken or not. 
 function verifyUser(userID) {
 	var dbref = firebase.database().ref('/Users/' + userID);
