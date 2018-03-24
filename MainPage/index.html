@@ -3,7 +3,7 @@
 <head>
 	<title>Main Page</title>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,10 +23,26 @@
 </head>
 <body>
 
-    <div class="container-fluid"></div>
-         
-         
-    <div id="map"></div>
+    <div class="w3-bar w3-padding-16 w3-large">
+        <input type="text" class="w3-bar-item w3-input" placeholder="Search City">
+        <a href="#" class="w3-bar-item w3-button w3-blue">Submit</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">Categories</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="#" class="w3-bar-item w3-button">Restaurants</a>
+              <a href="#" class="w3-bar-item w3-button">Beauty Supplies</a>
+              <a href="#" class="w3-bar-item w3-button">Apparel</a>
+              <a href="#" class="w3-bar-item w3-button">Salon/Barber</a>
+              <a href="#" class="w3-bar-item w3-button">Private Practice</a>
+              <a href="#" class="w3-bar-item w3-button">Worship</a>
+              <a href="#" class="w3-bar-item w3-button">Other</a>
+              <a href="#" class="w3-bar-item w3-button"></a>
+            </div>
+        </div>
+    </div>
+    
+	<div id="map"></div>
+
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcy_-nLaXgBGg4wGoRAqpilFURun90f7A&callback=initMap"
     async defer></script>

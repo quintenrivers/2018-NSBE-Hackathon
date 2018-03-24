@@ -1,4 +1,27 @@
 #map {
+<<<<<<< HEAD
         height: 3000px;
         width: 3000px;
       }
+=======
+        height: 87%;
+        width: 100%;
+      }
+
+.hover-button {
+    opacity: 0.5;
+    background-color: #ffffff;
+    
+}
+
+.hover-button:hover {
+    opacity: 1;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+>>>>>>> 9a51e886cfda3c69bb5571a1805f37fb1aef2c89
