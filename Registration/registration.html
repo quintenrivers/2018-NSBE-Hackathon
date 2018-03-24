@@ -19,30 +19,30 @@
             <div class="col-md-8 order-md-1 offset-2">
                 <h4 class="mb-3 header" id="regrHeader">Registration</h4>
                 <hr class="mb-4">
-                <form class="needs-validation" novalidate="">
+                <form novalidate="">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="fname">First Name</label>
-                            <input type="text" class="form-control" id="fname" placeholder="Owner's First Name" required="">
+                            <input type="text" class="form-control" id="fname" placeholder="Owner's First Name"  >
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="lname">Last Name</label>
-                            <input type="text" class="form-control" id="lname" placeholder="Owner's Last Name" required="">
+                            <input type="text" class="form-control" id="lname" placeholder="Owner's Last Name"  >
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="userID">User ID</label>
-                            <input type="text" class="form-control" id="userID" placeholder="User ID" required="">
+                            <input type="text" class="form-control" id="userID" placeholder="User ID"  >
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="Password">Password</label>
-                            <input type="password" class="form-control" id="Password" placeholder="Password" required="">
+                            <input type="password" class="form-control" id="password" placeholder="Password"  >
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="bName">Business Name</label>
-                        <input type="text" class="form-control" id="bName" placeholder="Business Name" required="">
+                        <input type="text" class="form-control" id="bName" placeholder="Business Name"  >
                         <div class="invalid-feedback">
                             Please enter your business name.
                         </div>
@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="country">Category</label>
-                            <select class="custom-select d-block w-100" id="country" required="">
+                            <select class="custom-select d-block w-100" id="category"  >
                                 <option value="">Choose...</option>
                                 <option>Food</option>
                                 <option>Other</option>
@@ -62,24 +62,41 @@
                         </div>
                     </div>
                     <div class="mb-3">
+                        <label for="description">Description</label>
+                        <textarea type="text" class="form-control" id="description" placeholder="Enter a brief description of your business"  ></textarea>
+                        
+                    </div>
+                    <div class="mb-3">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="street" required="">
+                        <input type="text" class="form-control" id="address" placeholder="street"  >
                         <div class="invalid-feedback">
                             Please enter your address.
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="address2">Address 2
                             <span class="text-muted">(Optional)</span>
                         </label>
                         <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    </div> -->
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="Address2">Address 2</label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite"  >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="City"  >
+                        </div>
                     </div>
+
 
                     <div class="row">
                         <div class="col-md-5 mb-3">
                             <label for="country">Country</label>
-                            <select class="custom-select d-block w-100" id="country" required="">
+                            <select class="custom-select d-block w-100" id="country"  >
                                 <option value="">Choose...</option>
                                 <option>United States</option>
                             </select>
@@ -89,7 +106,7 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="state">State</label>
-                            <select class="custom-select d-block w-100" id="state" required="">
+                            <select class="custom-select d-block w-100" id="state"  >
                                 <option value="">Choose...</option>
                                 <option>Pensylvania</option>
                             </select>
@@ -99,7 +116,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="zip">Zip</label>
-                            <input type="text" class="form-control" id="zip" placeholder="" required="">
+                            <input type="text" class="form-control" id="zip" placeholder=""  >
                             <div class="invalid-feedback">
                                 Zip code required.
                             </div>
@@ -107,25 +124,39 @@
                     </div>
                     <!-- <div class="mb-3">
                         <label for="website">Website</label>
-                        <input type="text" class="form-control" id="address" placeholder="website" required="">
+                        <input type="text" class="form-control" id="address" placeholder="website"  >
                     </div> -->
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="website">Website</label>
-                            <input type="text" class="form-control" id="address" placeholder="website" required="">
+                            <input type="text" class="form-control" id="website" placeholder="website"  >
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="phone">Phone</label>
-                            <input type="text" class="form-control" id="address" placeholder="Phone number" required="">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone number"  >
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" id="subBtn" type="submit">Register</button>
+                    <button class="btn btn-primary btn-lg btn-block" id="subBtn" onclick="register()" type="button">Register</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <script src="./script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCy59U9y-_IWeOVpfEl7Nk4BfHl_mugVTg",
+        authDomain: "hackathon-a0972.firebaseapp.com",
+        databaseURL: "https://hackathon-a0972.firebaseio.com",
+        projectId: "hackathon-a0972",
+        storageBucket: "hackathon-a0972.appspot.com",
+        messagingSenderId: "838095309714"
+        };
+        firebase.initializeApp(config);
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -134,6 +165,8 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

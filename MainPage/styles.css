@@ -1,4 +1,9 @@
 #map {
+<<<<<<< HEAD
+        height: 3000px;
+        width: 3000px;
+      }
+=======
         height: 87%;
         width: 100%;
       }
@@ -19,3 +24,4 @@ html, body {
         padding: 0;
       }
 
+>>>>>>> 9a51e886cfda3c69bb5571a1805f37fb1aef2c89
