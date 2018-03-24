@@ -1,5 +1,6 @@
 var autocomplete;
 var latitude = "";
+<<<<<<< HEAD
 var longitude = ""; 
 
 //Restaurant
@@ -20,6 +21,16 @@ addBusiness("Anna's Salon Elite", "Salon/Barbershop", "Enhance your beauty with 
 
 //adds a business to the database
 function addBusiness(business, category, description, phone, website, latitude, longitude)
+=======
+var longitude = "";
+var address = "";
+addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
+addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
+verifyUser("carol23");
+authenticateUser("carol23", "122");
+//adds a business to the database
+function addBusiness(business, category, description, phone, website, lat, long,addr)
+>>>>>>> deb98e76a40bc8b3cbf1a7621ffa0b31ec9f5c45
 {
 
 
@@ -29,8 +40,14 @@ function addBusiness(business, category, description, phone, website, latitude, 
 		Description: description,
 		Phone: phone,
 		Website: website,
+<<<<<<< HEAD
 		Latitude: latitude, 
 		Longitude: longitude
+=======
+		Lat: lat, 
+		Long: long,
+		Address: addr
+>>>>>>> deb98e76a40bc8b3cbf1a7621ffa0b31ec9f5c45
 	});
 }
 
@@ -79,7 +96,7 @@ function register() {
 	// alert(phone);
 
 
-	addBusiness(bName, category,description, phone,website, latitude, longitude);
+	addBusiness(bName, category,description, phone,website, latitude, longitude, address);
 	addUser(userID, bName, fname, lname, password)
 }
 //Function verfies if usernmae is taken or not. 
@@ -124,6 +141,8 @@ function initGoogle() {
 		var place = autocomplete.getPlace();
 		latitude = place.geometry.location.lat();
 		longitude = place.geometry.location.lng();
+		address = place.formatted_address;
+		console.log(address);
 		console.log(latitude);
 		console.log(longitude);
 	});

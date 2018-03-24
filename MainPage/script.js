@@ -29,13 +29,7 @@ function initMap() {
             map.setZoom(17);  // Why 17? Because it looks good.
           }		
 
-
-		});
-
-      }
-
-function drawMarkers() {
-	if(!markersCreated) {
+          if(!markersCreated) {
           		markersCreated = true; 
 				var dbref = firebase.database().ref('/Businesses/');
 				dbref.once('value').then(snap => {
@@ -47,13 +41,27 @@ function drawMarkers() {
 				          position: myLatLng,
 				          map: map,
 				        });
+				        var title = childSnap.key;
+				        var website = childSnap.child("Website").val()
+				        var number = childSnap.child("Phone").val()
+				        var address = childSnap.child("Address").val();
+				        var description = childSnap.child("Description").val()
+				        var contentString = "<h1>" + title + "</h1>" + "<p><b>Address: </b>" + address + "</p>" + "<p><b>Website: </b>" + "<a href='https://" + website + "'>" + website + "</a></p>" + "<p><b>Number: </b>" + number + "</p><p><b>Description</b></p><p>" + description + "</p>";
+				        var infowindow = new google.maps.InfoWindow({
+				          content: contentString
+				        });  
+				        marker.addListener('click', function() {
+				          infowindow.open(map, marker);
+				        });
 				        markers[index] = marker;
 				        index++;
 					});
 				});	
 			}
-			else console.log(markers);
-}
+			
+		});
+
+      }
 
 $(document).ready(function(){
 
