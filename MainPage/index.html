@@ -24,7 +24,7 @@
 <body>
 
     <div class="w3-bar w3-padding-16 w3-large">
-        <input type="text" class="w3-bar-item w3-input" placeholder="Search City">
+        <input id="searchTextField" type="text" class="w3-bar-item w3-input" placeholder="Search City">
         <a href="#" class="w3-bar-item w3-button w3-blue">Submit</a>
         <div class="w3-dropdown-hover">
             <button class="w3-button">Categories</button>
@@ -43,7 +43,7 @@
     
 	<div id="map"></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcy_-nLaXgBGg4wGoRAqpilFURun90f7A&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcy_-nLaXgBGg4wGoRAqpilFURun90f7A&callback=initMap&libraries=places"
     async defer></script>
 </body>
 </html>
