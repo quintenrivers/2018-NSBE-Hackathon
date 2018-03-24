@@ -1,0 +1,21 @@
+#map {
+        height: 87%;
+        width: 100%;
+      }
+
+.body {
+    opacity: 0.5;
+    background-color: #ffffff;
+    
+}
+
+.hover-button:hover {
+    opacity: 1;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
