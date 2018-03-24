@@ -23,8 +23,31 @@
 </head>
 <body>
 
-	<div id="map"></div>
+    <div class="row navbar nav text-center m-3">
+        <!--Dropdown toggle for cities-->
+        <!--FIXME: CENTER DROPDOWN-->
+        <div class="col-sm-4 px-1 hover-button h2 dropdown-toggle" data-toggle="dropdown">
+            <a>Location</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="h3 m-3">Pittsburgh</a></li>
+                    <li><a href="#" class="h3 m-3">New York City</a></li>
+                    <li><a href="#" class="h3 m-3">Gainesville</a></li>
+                </ul>
+        </div>
+        
+        <div class="col-sm-4 px-2 h2 dropdown-toggle hover-button" data-toggle="dropdown">
+            <a class="hover-button" data-toggle="dropdown">Categories</a>
+                <ul class="dropdown-menu">
+                    <l1><a href="#" class="h3 m-3">Restaurants</a></l1>
+                    <l1><a href="#" class="h3 m-3">Beauty</a></l1>
+                    <l1><a href="#" class="h3 m-3">Practices</a></l1>
+                </ul>
+        </div>
+        
+        <div class="col-sm-4 px-2 h2 hover-button"><a>Submit</a></div>
+    </div>
     
+	<div id="map"></div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcy_-nLaXgBGg4wGoRAqpilFURun90f7A&callback=initMap"
     async defer></script>
