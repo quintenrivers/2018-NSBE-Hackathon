@@ -1,3 +1,6 @@
+var autocomplete;
+var latitude = "";
+var longitude = ""; 
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
 verifyUser("carol23");
@@ -93,4 +96,19 @@ function authenticateUser(userID, password) {
 		}
 	});	
 
+}
+
+function initGoogle() {
+	var input = document.getElementById('adressTextField');
+	var options = {
+	  types: ['address'],
+	  componentRestrictions: {country: 'us'}
+	};
+
+	autocomplete = new google.maps.places.Autocomplete(input, options);
+	autocomplete.addListener('place_changed',function(){
+		var place = autocomplete.getPlace();
+		latitude = place.geometry.location.lat();
+		longitude = place.geometry.location.lng();
+	});
 }
