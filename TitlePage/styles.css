@@ -19,3 +19,13 @@ html, body {
         padding: 0;
       }
 
+      .bg-dark {
+        background-color: #0062cc!important;
+    }
+
+    .cus-fixed-top {
+        position: relative!important;
+
+    }
+
+  
