@@ -1,12 +1,13 @@
 var autocomplete;
 var latitude = "";
-var longitude = ""; 
+var longitude = "";
+var address = "";
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
 verifyUser("carol23");
 authenticateUser("carol23", "122");
 //adds a business to the database
-function addBusiness(business, category, description, phone, website, lat, long)
+function addBusiness(business, category, description, phone, website, lat, long,addr)
 {
 
 
@@ -17,7 +18,8 @@ function addBusiness(business, category, description, phone, website, lat, long)
 		Phone: phone,
 		Website: website,
 		Lat: lat, 
-		Long: long
+		Long: long,
+		Address: addr
 	});
 }
 
@@ -50,6 +52,8 @@ function register() {
 	var phone = document.getElementById('phone').value;
 	//var city = document.getElementById('city').value;
 	var description = document.getElementById('description').value;
+	var latitude = document.getElementById('latitude').value;
+	var longitude = document.getElementById('longitude').value;
 	// alert( lname)
 	// alert(userID)
 	// alert( Password)
@@ -64,7 +68,7 @@ function register() {
 	// alert(phone);
 
 
-	addBusiness(bName, category,description, phone,website, latitude, longitude);
+	addBusiness(bName, category,description, phone,website, latitude, longitude, address);
 	addUser(userID, bName, fname, lname, password)
 }
 //Function verfies if usernmae is taken or not. 
@@ -109,6 +113,8 @@ function initGoogle() {
 		var place = autocomplete.getPlace();
 		latitude = place.geometry.location.lat();
 		longitude = place.geometry.location.lng();
+		address = place.formatted_address;
+		console.log(address);
 		console.log(latitude);
 		console.log(longitude);
 	});
