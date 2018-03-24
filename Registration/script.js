@@ -1,27 +1,5 @@
 var autocomplete;
 var latitude = "";
-<<<<<<< HEAD
-var longitude = ""; 
-
-//Restaurant
-addBusiness("Aunt Mae's Kitchen", "Restaurant", "Specialized in Homemade Sweet Potato Pie with sugar or agave nectar or honey.", "412-321-6163", "", "40.456899", "-80.022904");
-addBusiness("BBQ Stu's Inc", "Restaurant", "We market a National Award Winning barbeque sauces under the Bbq Stu’s label And wholesale our products to restaurants and grocery stores.", "412-673-6457", "www.Bbqstus.com", "40.336678", "-79.847081");
-addBusiness("Smokin Memphis Style BBQ Co. LLC", "Restaurant", "DELICIOUS MARINATED AND DRY RUBBED RIBS; SMOKED LOW AND SLOW. BBQ CHICKEN, 5 CHEESE & MAC, FRESH GREENS, JAMAICAN JERK CHICKEN. DAILY SPECIALS FEATURING HOME TOWN FAVORITES.", "412-766-3400", "", "40.476066", "-80.031563");
-
-//beauty supplies
-addBusiness("Heavenly Body", "Beauty Supplies", "We offer natural products: Raw shea butter yellow and white, soaps, talc free powder, lotions, body washes, body scrubs, whipped body butters, fragrances, and incense", "412-646-4090", "www.heavenlybodyforyou.com", "40.438761", "-79.989934");
-addBusiness("Nebby Beauty Care", "Beauty Supplies", "Full service beauty supply and natural hair business. In additional African owned and operated", "412-682-0581", "nebbybeautycare.com", "40.440871", "-79.958614");
-addBusiness("Weave No More", "Beauty Supplies", "Full lace wigs , Custom Wigs and Adhesives available for sale.", "412-450-1129", "", "41.053909", "-79.752398");
-
-//salon/barbershop
-addBusiness("Top Ranks Cuts", "Salon/Barbershop", "", "412-727-1831", "", "40.465682", "-79.825989");
-addBusiness("Anna's Salon Elite", "Salon/Barbershop", "Enhance your beauty with great hair cut and style at Anna’s Salon Elite in Pittsburgh. We are award winning hair and beauty salon in Aliquippa, PA.", "724-375-8511", " http://annassalonelite.com", "40.602636", "-80.277745");
-
-
-
-//adds a business to the database
-function addBusiness(business, category, description, phone, website, latitude, longitude)
-=======
 var longitude = "";
 var address = "";
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
@@ -30,7 +8,7 @@ verifyUser("carol23");
 authenticateUser("carol23", "122");
 //adds a business to the database
 function addBusiness(business, category, description, phone, website, lat, long,addr)
->>>>>>> deb98e76a40bc8b3cbf1a7621ffa0b31ec9f5c45
+
 {
 
 
@@ -40,14 +18,10 @@ function addBusiness(business, category, description, phone, website, lat, long,
 		Description: description,
 		Phone: phone,
 		Website: website,
-<<<<<<< HEAD
-		Latitude: latitude, 
-		Longitude: longitude
-=======
 		Lat: lat, 
 		Long: long,
 		Address: addr
->>>>>>> deb98e76a40bc8b3cbf1a7621ffa0b31ec9f5c45
+
 	});
 }
 
@@ -71,7 +45,7 @@ function register() {
 	var password = document.getElementById('password').value;
 	var bName = document.getElementById('bName').value;
 	var category = document.getElementById('category').value;
-	/*var address = document.getElementById('address').value;
+	/*	var address = document.getElementById('address').value;
 	var address2 = document.getElementById('address2').value;
 	var country = document.getElementById('country').value;
 	var state = document.getElementById('state').value;
@@ -80,8 +54,8 @@ function register() {
 	var phone = document.getElementById('phone').value;
 	//var city = document.getElementById('city').value;
 	var description = document.getElementById('description').value;
-	var latitude = document.getElementById('latitude').value;
-	var longitude = document.getElementById('longitude').value;
+	//var latitude = document.getElementById('lat').value;
+	//var longitude = document.getElementById('longitude').value;
 	// alert( lname)
 	// alert(userID)
 	// alert( Password)
