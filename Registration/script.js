@@ -20,6 +20,7 @@ function addBusiness(business, category, description, phone, website, lat, long,
 		Lat: lat, 
 		Long: long,
 		Address: addr
+
 	});
 }
 
@@ -43,7 +44,7 @@ function register() {
 	var password = document.getElementById('password').value;
 	var bName = document.getElementById('bName').value;
 	var category = document.getElementById('category').value;
-	/*var address = document.getElementById('address').value;
+	/*	var address = document.getElementById('address').value;
 	var address2 = document.getElementById('address2').value;
 	var country = document.getElementById('country').value;
 	var state = document.getElementById('state').value;
@@ -52,8 +53,8 @@ function register() {
 	var phone = document.getElementById('phone').value;
 	//var city = document.getElementById('city').value;
 	var description = document.getElementById('description').value;
-	var latitude = document.getElementById('latitude').value;
-	var longitude = document.getElementById('longitude').value;
+	//var latitude = document.getElementById('lat').value;
+	//var longitude = document.getElementById('longitude').value;
 	// alert( lname)
 	// alert(userID)
 	// alert( Password)
