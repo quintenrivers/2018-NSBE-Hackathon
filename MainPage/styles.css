@@ -1,6 +1,6 @@
 #map {
-        height: 3000px;
-        width: 3000px;
+        height: 87%;
+        width: 100%;
       }
 
 .hover-button {
@@ -12,3 +12,10 @@
 .hover-button:hover {
     opacity: 1;
 }
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
