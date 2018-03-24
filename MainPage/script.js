@@ -1,6 +1,9 @@
 
 var map;
 var autocomplete; 
+var markersCreated = false;
+ var index = 0; 
+ var markers = new Array(); 
 
 function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -25,8 +28,32 @@ function initMap() {
             map.setCenter(place.geometry.location);
             map.setZoom(17);  // Why 17? Because it looks good.
           }		
+
+
 		});
+
       }
+
+function drawMarkers() {
+	if(!markersCreated) {
+          		markersCreated = true; 
+				var dbref = firebase.database().ref('/Businesses/');
+				dbref.once('value').then(snap => {
+					snap.forEach(function(childSnap) {
+						var lat = childSnap.child("Lat").val();
+						var long = childSnap.child("Long").val();
+						var myLatLng = {lat: lat, lng: long};
+						var marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				        });
+				        markers[index] = marker;
+				        index++;
+					});
+				});	
+			}
+			else console.log(markers);
+}
 
 $(document).ready(function(){
 

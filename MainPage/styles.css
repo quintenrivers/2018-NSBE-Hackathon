@@ -3,6 +3,10 @@
         width: 100%;
       }
 
+#selection {
+  width:20%;
+}
+
 .hover-button {
     opacity: 0.5;
     background-color: #ffffff;

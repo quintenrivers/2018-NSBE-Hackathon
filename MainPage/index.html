@@ -25,25 +25,39 @@
 
     <div class="w3-bar w3-padding-16 w3-large">
         <input id="searchTextField" type="text" class="w3-bar-item w3-input" placeholder="Search City">
-        <a href="#" class="w3-bar-item w3-button w3-blue">Submit</a>
-        <div class="w3-dropdown-hover">
-            <button class="w3-button">Categories</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="#" class="w3-bar-item w3-button">Restaurants</a>
-              <a href="#" class="w3-bar-item w3-button">Beauty Supplies</a>
-              <a href="#" class="w3-bar-item w3-button">Apparel</a>
-              <a href="#" class="w3-bar-item w3-button">Salon/Barber</a>
-              <a href="#" class="w3-bar-item w3-button">Private Practice</a>
-              <a href="#" class="w3-bar-item w3-button">Worship</a>
-              <a href="#" class="w3-bar-item w3-button">Other</a>
-              <a href="#" class="w3-bar-item w3-button"></a>
-            </div>
-        </div>
+        
+        <select id= "selection" class=" w3-select w3-border">
+            <option>All</option>
+            <option>Restaurant</option>
+            <option>Beauty Supplies</option>
+            <option>Salon</option>
+            <option>BarberShop</option>
+            <option>Private Practice</option>
+            <option>Apparels</option>
+            <option>Worship</option>
+            <option>Other</option>
+        </select>
+            
+        
     </div>
     
 	<div id="map"></div>
 
 
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCy59U9y-_IWeOVpfEl7Nk4BfHl_mugVTg",
+    authDomain: "hackathon-a0972.firebaseapp.com",
+    databaseURL: "https://hackathon-a0972.firebaseio.com",
+    projectId: "hackathon-a0972",
+    storageBucket: "hackathon-a0972.appspot.com",
+    messagingSenderId: "838095309714"
+  };
+  firebase.initializeApp(config);
+</script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcy_-nLaXgBGg4wGoRAqpilFURun90f7A&callback=initMap&libraries=places"
     async defer></script>
 </body>
