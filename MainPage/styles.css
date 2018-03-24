@@ -24,3 +24,6 @@ html, body {
       }
 
 
+      .bg-dark {
+        background-color: #0062cc!important;
+    }
