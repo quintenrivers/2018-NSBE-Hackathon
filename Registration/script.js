@@ -1,21 +1,23 @@
+var autocomplete;
+var latitude = "";
+var longitude = ""; 
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
 addUser("carol23", "C's Kitchen", "Carol", "Strickland", "123");
 verifyUser("carol23");
 authenticateUser("carol23", "122");
 //adds a business to the database
-function addBusiness(business, category, city, description, phone, street_address, website, zipcode)
+function addBusiness(business, category, description, phone, website, lat, long)
 {
 
 
 	firebase.database().ref("/Businesses/" + business).set(
 	{
 		Category: category,
-		City: city,
 		Description: description,
 		Phone: phone,
-		StreetAdress: street_address,
 		Website: website,
-		Zipcode: zipcode
+		Lat: lat, 
+		Long: long
 	});
 }
 
@@ -39,14 +41,14 @@ function register() {
 	var password = document.getElementById('password').value;
 	var bName = document.getElementById('bName').value;
 	var category = document.getElementById('category').value;
-	var address = document.getElementById('address').value;
+	/*var address = document.getElementById('address').value;
 	var address2 = document.getElementById('address2').value;
 	var country = document.getElementById('country').value;
 	var state = document.getElementById('state').value;
-	var zip = document.getElementById('zip').value;
+	var zip = document.getElementById('zip').value;		*/
 	var website = document.getElementById('website').value;
 	var phone = document.getElementById('phone').value;
-	var city = document.getElementById('city').value;
+	//var city = document.getElementById('city').value;
 	var description = document.getElementById('description').value;
 	// alert( lname)
 	// alert(userID)
@@ -62,7 +64,7 @@ function register() {
 	// alert(phone);
 
 
-	addBusiness(bName, category, city, description, phone, address+' '+ address2, website, zip);
+	addBusiness(bName, category,description, phone,website, latitude, longitude);
 	addUser(userID, bName, fname, lname, password)
 }
 //Function verfies if usernmae is taken or not. 
@@ -92,5 +94,23 @@ function authenticateUser(userID, password) {
 			console.log("Username or password not valid");
 		}
 	});	
+
+}
+
+function initGoogle() {
+	var input = document.getElementById('adressTextField');
+	var options = {
+	  types: ['address'],
+	  componentRestrictions: {country: 'us'}
+	};
+
+	autocomplete = new google.maps.places.Autocomplete(input, options);
+	autocomplete.addListener('place_changed',function(){
+		var place = autocomplete.getPlace();
+		latitude = place.geometry.location.lat();
+		longitude = place.geometry.location.lng();
+		console.log(latitude);
+		console.log(longitude);
+	});
 
 }
